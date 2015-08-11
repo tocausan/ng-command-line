@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="/bower_components/foundation/css/foundation.css"/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <!-- Bower -->
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+
+  </head>
+
+
+  <body ng-app="tocausan" ng-cloak class="ng-cloak" ng-controller="mainController">
+
+
+  <div class="commandLine columns">
+    <div class="small-12 columns" ng-repeat="command in commands">
+      <p class="right">{{$index}}</p>
+      <p class="left">[captain]#</p>
+      <p class="left">{{command.text}}</p>
+    </div>
+
+    <div class="small-12 columns">
+      <p class="left">[captain]#</p>
+      <div class="small-10 left">
+        <input type="text" class="small-12" ng-model="commandText" ng-keypress="handleKeyPress($event)" autofocus style="margin-top: -11px"/>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Angular -->
+  <script type="text/javascript" src="/javascripts/app.js"></script>
+  <script type="text/javascript" src="/javascripts/directives.js"></script>
+  <script type="text/javascript" src="/javascripts/mainController.js"></script>
+
+</html>
